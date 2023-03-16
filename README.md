@@ -1,1 +1,1 @@
-https://Beergrizl.github.io/cssBayan/cssBayan/index.html
+https://Beergrizl.github.io/cssBayan/index.html
