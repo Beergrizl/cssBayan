@@ -30,3 +30,47 @@
 .container h1 {
     color: black;
 }
+
+.meme input {
+    display: none;
+ }
+
+.meme-image {
+    display: flex;
+    justify-content: center;
+    margin: 0 30px 10px 30px;
+}
+
+.meme label {
+    display: flex;
+    justify-content: space-between;
+}
+  .container:hover .meme label:after {
+    content: '+';
+    font-size: 1.5em;
+    transition: transform 1s;
+    color: black;
+}
+
+.meme:hover label:after {
+    transform: rotate(135deg);
+    color: black;
+}
+
+.meme input:checked + label:after {
+    transform: rotate(135deg);
+}
+
+.meme .meme-image {
+    max-height: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+.container:hover .meme label h3, .meme input:checked + label h3{
+    color: black;
+}
+
+.meme input:checked ~ .meme-image, .meme input:hover ~ .meme-image {
+    max-height: 100vh;
+}
+
