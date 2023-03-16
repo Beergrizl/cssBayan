@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: blue;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: beige;
+
+}
+
+.container {
+    margin: 0 50px;
+    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: antiquewhite;
+    padding: 20px;
+}
+
+.container h1 {
+    color: black;
+}
+
+.meme input {
+    display: none;
+ }
+
+.meme-image {
+    display: flex;
+    justify-content: center;
+    margin: 0 30px 10px 30px;
+}
+
+.meme label {
+    display: flex;
+    justify-content: space-between;
+}
+  .container:hover .meme label:after {
+    content: '+';
+    font-size: 1.5em;
+    transition: transform 1s;
+    color: black;
+}
+
+.meme:hover label:after {
+    transform: rotate(135deg);
+    color: black;
+}
+
+.meme input:checked + label:after {
+    transform: rotate(135deg);
+}
+
+.meme .meme-image {
+    max-height: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+.container:hover .meme label h3, .meme input:checked + label h3{
+    color: black;
+}
+
+.meme input:checked ~ .meme-image, .meme input:hover ~ .meme-image {
+    max-height: 100vh;
+}
+
+@media screen and (max-width: 525px) {
+    .meme-image img{ width: 125px }
+}
+@media screen and (max-width: 334px) {
+    .meme-image img{ width: 100px }
+}
+
+@media screen and (min-width: 820px) {
+    .meme label h3 { font-size: 1.5em }
+}
+
+@media screen and (min-width: 1920px) {
+    .meme label h3 { font-size: 1.7em }
+}
+@media screen and (max-width: 320px) {
+    .container h1 { font-size: 1.5em }
+}
